@@ -4,7 +4,7 @@
 
 .logo-img {
   width: 240px;
-  height: 90px;
+  height: 80px;
   position: relative;
   left: 21rem;
 }
@@ -22,5 +22,18 @@ nav {
 .item-container {
   text-align: center;
   font-weight: lighter;
+}
+
+.counter-button {
+    margin: 0 2% 0 2%;
+    border: none;
+    font-size: 16px;
+    
+}
+
+.cart-add {
+    border: none;
+    margin: 0 0 0 1.6%;
+    margin-top: 1%;
 }
 
