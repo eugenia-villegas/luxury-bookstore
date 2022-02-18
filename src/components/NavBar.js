@@ -23,16 +23,9 @@ const Navbar = () => {
                     <li className="nav-item">
                     <a className="nav-link active" href="/">Magazines</a>
                     </li>
-                    <li className="nav-item dropdown">
-                    <a className="nav-link active dropdown-toggle" href="/" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Books
-                    </a>
-                    <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a className="dropdown-item" href="/">Fantasy</a></li>
-                        <li><a className="dropdown-item" href="/">Sci-Fi</a></li>
-                        <li><a className="dropdown-item" href="/">Poetry</a></li>
-                    </ul>
-                    </li>
+                    <li className="nav-item">
+                    <a className="nav-link active" href="/">About Us</a>
+                    </li>                    
                 </ul>
                 <a className="navbar-brand" href="/"><img alt='logo' className="logo-img" src={Logo} /></a>
                 <div className="d-none d-sm-block d-md-block d-lg-block d-xl-block d-xxl-block">

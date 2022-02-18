@@ -1,10 +1,32 @@
-import diorImg from '../img/dior.jpg'
-import golfImg from '../img/golf.jpg'
-import watchesImg from '../img/watches.jpg'
-import yslImg from '../img/yvesSaintLaurent.jpg'
-import chanelImg from '../img/chanel.jpg'
+import diorImg from '../img/dior.jpg';
+import golfImg from '../img/golf.jpg';
+import watchesImg from '../img/watches.jpg';
+import yslImg from '../img/yvesSaintLaurent.jpg';
+import chanelImg from '../img/chanel.jpg';
+import bowling from '../img/bowling.jpg';
+import chess from '../img/chess.jpg';
+import poker from '../img/poker.jpg';
+import bookend from '../img/world_bookend.jpg';
+import letter from '../img/letter_opener.jpg';
+
 
 const itemsMag = [
+    {
+        id: "bookends",
+        title: "Set of 2 Globe Bookends",
+        description: "Bring organisation and character to your interior with this pair of distinctive bookends, beautifully formed with an antique brass or nickel-plated finish.",
+        price: 310,
+        stock: 12,
+        pictureUrl: bookend,
+    },
+    {
+        id: "letter",
+        title: "Bambou Letter Opener",
+        description: "Exquisitely handcrafted with Limoges porcelain and 24-carat gold plating, this distinctive letter opener looks to the natural world for design inspiration.",
+        price: 295,
+        stock: 7,
+        pictureUrl: letter,
+    },
     {
         id: "watches",
         title: "Watches: A Guide by Hodinkee",
@@ -45,7 +67,32 @@ const itemsMag = [
         stock: 7,
         pictureUrl: chanelImg,
     },
-
+    ,
+    {
+        id: "bowling",
+        title: "Walnut & Leader Bowling Set",
+        description: "Joining premium leather with Canaletto walnut, this portable bowling set deserves a space in the office.",
+        price: 1980,
+        stock: 20,
+        pictureUrl: bowling,
+    },
+    ,
+    {
+        id: "chess",
+        title: "Chess Set",
+        description: "Inject opulence into your hobbies at home with the L’Objet Chess Set.",
+        price: 2140,
+        stock: 10,
+        pictureUrl: chess,
+    },
+    {
+        id: "poker",
+        title: "Chocolate Shagreen Poker Set",
+        description: "Designed exclusively for the AERIN brand, the Chocolate Shagreen Poker Set is both seductive and sleek.",
+        price: 4050,
+        stock: 15,
+        pictureUrl: poker,
+    },
 ];
 
 export default itemsMag;
