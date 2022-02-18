@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo from '../img/Deluxe.png';
 import Carrito from '../components/CartWidget';
-
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -15,21 +15,21 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/">Board Games</a>
+                    <Link to="/category/2" className="nav-link active" aria-current="page" href="/">Board Games</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/">Accesories</a>
+                    <Link to="/category/3" className="nav-link active" aria-current="page" href="/">Accesories</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" href="/">Magazines</a>
+                    <Link to="/category/1" className="nav-link active" href="/">Magazines</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" href="/">About Us</a>
+                    <Link to="/aboutUs" className="nav-link active" href="/">About Us</Link>
                     </li>                    
                 </ul>
-                <a className="navbar-brand" href="/"><img alt='logo' className="logo-img" src={Logo} /></a>
+                <Link to="/"><img alt='logo' className="logo-img" src={Logo} /></Link>
                 <div className="d-none d-sm-block d-md-block d-lg-block d-xl-block d-xxl-block">
-                 <p className="carrito"><Carrito /></p>
+                 <span className="carrito"><Carrito /></span>
                  
                 </div>
             </div>

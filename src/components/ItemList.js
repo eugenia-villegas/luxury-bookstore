@@ -1,6 +1,7 @@
 import Item from '../components/Item.js';
-import { useState, useEffect } from "react";
-import itemsMag from '../utils/Products.js'
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import itemsMag from '../utils/Products.js';
 
 
 
@@ -8,6 +9,8 @@ import itemsMag from '../utils/Products.js'
 
 let okok = true;
 let data = itemsMag;
+
+
 
 const customFetch = (timeout, data)=> {
     return new Promise((resolve, reject) =>{
@@ -26,16 +29,25 @@ const customFetch = (timeout, data)=> {
 
 const ItemList = ()=> {
 
-const [products, setProducts] = useState ([]);
+    const [products, setProducts] = useState ([]);
+    const { idCategory } = useParams();
+
 
     function getProducts(){
-        customFetch(3000, data)
-        .then(data=> setProducts(data))
-        .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
+        if (idCategory === undefined) {
+            customFetch(3000, data)
+            .then(data=> setProducts(data))
+            .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
+        } else {
+            customFetch(3000, data.filter(item => item.category === parseInt(idCategory)))
+            .then(data=> setProducts(data))
+            .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
+        }
     }
+        
     
 
-    useEffect(getProducts,[]);
+    useEffect(getProducts,[idCategory]);
 
 
     return(
