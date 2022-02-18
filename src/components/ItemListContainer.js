@@ -1,9 +1,15 @@
+import ItemList from './ItemList.js'
+
+
+
 const ItemListContainer = () => {
-    return (
-        <div>
-            <hr/>
-            <h4 className="item-container">Pronto podrás ver nuestro catálogo aquí!</h4>
+    return(
+        <>
+        <hr/>
+        <div className='itemListContainer'>
+                        <ItemList />
         </div>
+        </>
     );
 }
 

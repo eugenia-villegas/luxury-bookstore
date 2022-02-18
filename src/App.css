@@ -6,7 +6,7 @@
   width: 240px;
   height: 80px;
   position: relative;
-  left: 21rem;
+  left: 16rem;
 }
 
 nav {
@@ -15,7 +15,7 @@ nav {
 
 .carrito {
   position: relative;
-  left: 57rem;
+  left: 50rem;
   font-size: 27px;
 }
 
@@ -35,5 +35,15 @@ nav {
     border: none;
     margin: 0 0 0 1.6%;
     margin-top: 1%;
+}
+
+.item-card {
+    width: 16rem;
+}
+
+
+.itemListContainer {
+    display: flex; 
+    justify-content: space-around;
 }
 

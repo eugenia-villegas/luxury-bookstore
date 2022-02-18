@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo from '../img/Deluxe.png';
-import Carrito from './CartWidget.js';
+import Carrito from '../components/CartWidget';
 
 
 
@@ -15,14 +15,17 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/">New In</a>
+                    <a className="nav-link active" aria-current="page" href="/">Board Games</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link active" href="/">Accesories</a>
+                    <a className="nav-link active" aria-current="page" href="/">Accesories</a>
+                    </li>
+                    <li className="nav-item">
+                    <a className="nav-link active" href="/">Magazines</a>
                     </li>
                     <li className="nav-item dropdown">
                     <a className="nav-link active dropdown-toggle" href="/" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categories
+                        Books
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a className="dropdown-item" href="/">Fantasy</a></li>

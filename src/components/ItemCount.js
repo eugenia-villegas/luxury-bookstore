@@ -19,20 +19,15 @@ const ItemCount = (props) =>  {
         }
     }
 
-    const alerta = () => {
-        alert(valoraciones + " productos han sido agregados al carrito")
-    }
-
     return (
         <>
         <div>
-            <p>
-                <p>Hay {stock} unidades en stock</p>
+            <p className="text-center">
                 <button onClick={increment} className="counter-button">+1</button>{valoraciones}
                 <button onClick={decrement} className="counter-button">-1</button>
 
                 <br />
-                <button onClick={alerta} className="cart-add">Agregar al Carrito</button>
+                <button className="cart-add">Agregar al Carrito</button>
             </p>
         </div>
         </>
