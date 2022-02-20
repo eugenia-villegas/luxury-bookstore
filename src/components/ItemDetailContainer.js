@@ -1,4 +1,4 @@
-import Item from '../components/Item.js';
+import ItemDetail from './ItemDetail.js';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import itemsMag from '../utils/Products.js';
@@ -12,7 +12,7 @@ let data = itemsMag;
 
 
 
-const customFetch = (timeout, data) => {
+const customFetch = (timeout, data)=> {
     return new Promise((resolve, reject) =>{
         setTimeout(()=>{
             if (okok){
@@ -20,42 +20,34 @@ const customFetch = (timeout, data) => {
             }else {
                 reject('KO')
             }
-        },timeout)
+        }, timeout)
     })
 };
+    
 
+const ItemDetailContainer = () => {
 
-
-
-const ItemList = ()=> {
-
-    const [products, setProducts] = useState ([]);
-    const { idCategory } = useParams();
+    const [products, setProducts] = useState({});
+    const { idDetails } = useParams();
     
 
 
-    function getProducts(){
-        if (idCategory === undefined) {
-            customFetch(2000, data)
+    function getItem(){
+        customFetch(2000, data.filter(item => item.id === idDetails))
             .then(data=> setProducts(data))
             .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
-        } else {
-            customFetch(2000, data.filter(item => item.category === parseInt(idCategory)))
-            .then(data=> setProducts(data))
-            .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
-        }
     }
         
     
 
-    useEffect(getProducts,[idCategory]);
+    useEffect(getItem,[idDetails]);
 
 
     return(
         <>
             {
                 products.map(item=>
-                    <Item 
+                    <ItemDetail
                     key={item.id}
                     pictureUrl={item.pictureUrl}
                     title={item.title}
@@ -68,4 +60,4 @@ const ItemList = ()=> {
     );
 };
 
-export default ItemList;
+export default ItemDetailContainer;

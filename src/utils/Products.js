@@ -12,7 +12,7 @@ import letter from '../img/letter_opener.jpg';
 
 const itemsMag = [
     {
-        id: "bookends",
+        id: "1",
         title: "Set of 2 Globe Bookends",
         description: "Bring organisation and character to your interior with this pair of distinctive bookends, beautifully formed with an antique brass or nickel-plated finish.",
         category: 3,
@@ -21,7 +21,7 @@ const itemsMag = [
         pictureUrl: bookend,
     },
     {
-        id: "letter",
+        id: "2",
         title: "Bambou Letter Opener",
         description: "Exquisitely handcrafted with Limoges porcelain and 24-carat gold plating, this distinctive letter opener looks to the natural world for design inspiration.",
         category: 3,
@@ -30,7 +30,7 @@ const itemsMag = [
         pictureUrl: letter,
     },
     {
-        id: "watches",
+        id: "3",
         title: "Watches: A Guide by Hodinkee",
         description: "Ben Clymer is the inspiration behind this.",
         category: 1,
@@ -39,7 +39,7 @@ const itemsMag = [
         pictureUrl: watchesImg,
     },
     {
-        id: "golf",
+        id: "4",
         title: "Golf: The Impossible Collection",
         description: "Has been described as a perfect objet d’art",
         category: 1,
@@ -48,7 +48,7 @@ const itemsMag = [
         pictureUrl: golfImg,
     },
     {
-        id: "ysl",
+        id: "5",
         title: "YSL: The Impossible Collection",
         description: "Gain a glimpse into the mesmerising mind of divine designer.",
         category: 1,
@@ -57,7 +57,7 @@ const itemsMag = [
         pictureUrl: yslImg,
     },
     {
-        id: "dior",
+        id: "6",
         title: "Dior by Marc Bohan",
         description: "The ultimate tome for couture-lovers everywhere.",
         category: 1,
@@ -66,7 +66,7 @@ const itemsMag = [
         pictureUrl: diorImg,
     },
     {
-        id: "chanel",
+        id: "7",
         title: "Chanel: The Impossible Collection",
         description: "A timeless testament to the evolution and success of the prestigious fashion house.",
         category: 1,
@@ -76,7 +76,7 @@ const itemsMag = [
     },
     ,
     {
-        id: "bowling",
+        id: "8",
         title: "Walnut & Leader Bowling Set",
         description: "Joining premium leather with Canaletto walnut, this portable bowling set deserves a space in the office.",
         category: 2,
@@ -86,7 +86,7 @@ const itemsMag = [
     },
     ,
     {
-        id: "chess",
+        id: "9",
         title: "Chess Set",
         description: "Inject opulence into your hobbies at home with the L’Objet Chess Set.",
         category: 2,
@@ -95,7 +95,7 @@ const itemsMag = [
         pictureUrl: chess,
     },
     {
-        id: "poker",
+        id: "10",
         title: "Chocolate Shagreen Poker Set",
         description: "Designed exclusively for the AERIN brand, the Chocolate Shagreen Poker Set is both seductive and sleek.",
         category: 2,
