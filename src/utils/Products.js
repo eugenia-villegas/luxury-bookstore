@@ -74,7 +74,6 @@ const itemsMag = [
         stock: 7,
         pictureUrl: chanelImg,
     },
-    ,
     {
         id: "8",
         title: "Walnut & Leader Bowling Set",
@@ -84,7 +83,6 @@ const itemsMag = [
         stock: 20,
         pictureUrl: bowling,
     },
-    ,
     {
         id: "9",
         title: "Chess Set",

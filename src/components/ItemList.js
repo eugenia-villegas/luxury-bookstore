@@ -62,6 +62,7 @@ const ItemList = ()=> {
                     description={item.description}
                     price={item.price}
                     stock={item.stock}
+                    id={item.id}
                     />)
             }
         </>
