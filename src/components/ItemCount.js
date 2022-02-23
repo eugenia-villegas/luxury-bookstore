@@ -21,14 +21,13 @@ const ItemCount = ({stock}) =>  {
         <>
         <div className="container">
             <div className="row">
-                <div className="col">
-                    <button onClick={decrement} className="counter-button">-1</button>{itemCantidad}
-                    <button onClick={increment} className="counter-button">+1</button>
-                    <br />
-                    <button className="cart-add" onClick={() => setCheckout(!checkout)}>Add to Cart</button>
+                <div className="col ">
+                    <button onClick={decrement} className="counter-button btn btn-outline-dark">-1</button>{itemCantidad}
+                    <button onClick={increment} className="counter-button btn btn-outline-dark">+1</button>
+                    <button className="cart-add btn btn-outline-dark" onClick={() => setCheckout(!checkout)}>Add to Cart</button>
                 </div>
                 <div className="col">
-                    {checkout && <Link to="/cart" href="/"><button>Checkout</button></Link>}
+                    {checkout && <Link to="/cart" href="/"><button className="btn btn-outline-dark">Checkout</button></Link>}
                 </div>
                 
             </div>

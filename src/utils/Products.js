@@ -32,7 +32,7 @@ const itemsMag = [
     {
         id: "3",
         title: "Watches: A Guide by Hodinkee",
-        description: "Ben Clymer is the inspiration behind this.",
+        description: "What started as a small blog exploring the world of watches has since blown up to encompass a successful magazine, e-comm hub and this beautiful book that aims to inspire fans of the ever-essential wrist-watch.",
         category: 1,
         price: 70,
         stock: 10,
@@ -41,7 +41,7 @@ const itemsMag = [
     {
         id: "4",
         title: "Golf: The Impossible Collection",
-        description: "Has been described as a perfect objet d’art",
+        description: "An unequivocal sensory treat for the golf fanatic, Golf: The Impossible Collection has been described as an objet d’art perfect for both those who play, and those who simply wish to peruse its pages.",
         category: 1,
         price: 780,
         stock: 10,
@@ -59,7 +59,7 @@ const itemsMag = [
     {
         id: "6",
         title: "Dior by Marc Bohan",
-        description: "The ultimate tome for couture-lovers everywhere.",
+        description: "An inspiring homage to designer Marc Bohan and his time at the helm of the legendary fashion house, this Dior book provides a unique insight into the mind of a design icon.",
         category: 1,
         price: 220,
         stock: 5,
@@ -68,7 +68,7 @@ const itemsMag = [
     {
         id: "7",
         title: "Chanel: The Impossible Collection",
-        description: "A timeless testament to the evolution and success of the prestigious fashion house.",
+        description: "A timeless testament to the evolution and success of the prestigious fashion house, this book is a literary museum exhibition showcasing the unparalleled elegance of Gabrielle Chanel.",
         category: 1,
         price: 830,
         stock: 7,
