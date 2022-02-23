@@ -63,3 +63,23 @@ nav {
     padding: 0 5% 0 5%;
 }
 
+
+.detail-container {
+    padding-top: 2%;
+}
+
+.detail-img {
+    width: 22rem;
+    height: 22rem;
+    padding: 2%;
+    border: 1px solid #a8a8a8;
+}
+
+.detail-card-container h5 {
+    padding-top: 2%;
+}
+
+.detail-card-container p {
+    line-height: 2;
+    padding: 0 0 2% 0;
+}

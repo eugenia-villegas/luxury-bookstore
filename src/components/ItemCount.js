@@ -27,7 +27,7 @@ const ItemCount = (props) =>  {
                 <button onClick={decrement} className="counter-button">-1</button>
 
                 <br />
-                <button className="cart-add">Agregar al Carrito</button>
+                <button className="cart-add">Add to Cart</button>
             </p>
         </div>
         </>

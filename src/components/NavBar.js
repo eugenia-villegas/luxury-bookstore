@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo from '../img/Deluxe.png';
 import Carrito from '../components/CartWidget';
 import { Link } from 'react-router-dom'
-
+import SearchForm from "../components/SearchForm.js";
 
 const Navbar = () => {
     return (
@@ -25,12 +25,14 @@ const Navbar = () => {
                     </li>
                     <li className="nav-item">
                     <Link to="/aboutUs" className="nav-link active" href="/">About Us</Link>
-                    </li>                    
+                    </li>  
+                    <li className="nav-item">
+                    <SearchForm/>  
+                    </li>              
                 </ul>
                 <Link to="/"><img alt='logo' className="logo-img" src={Logo} /></Link>
                 <div className="d-none d-sm-block d-md-block d-lg-block d-xl-block d-xxl-block">
                  <span className="carrito"><Carrito /></span>
-                 
                 </div>
             </div>
         </div>

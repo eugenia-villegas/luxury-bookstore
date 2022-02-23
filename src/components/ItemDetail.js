@@ -3,18 +3,20 @@ import ItemCount from './ItemCount.js';
 
 const ItemDetail = (props) => {
     return (
-        <div className="card h-100 item-card">
-            <img src={props.pictureUrl} class="card-img-top" alt={props.title} />
-            <hr/>
-            <div className="card-body text-center h-100">
-                <h6>{props.title}</h6>
-                <p className="card-price text-left">$ {props.price}</p>
-                <p className="fw-bold">{props.description}</p>
+        <div className="container detail-container">
+            <div className="row justify-content-md-center">
+                <hr></hr>
+                <div className="col-4">
+                <img className="detail-img" src={props.pictureUrl} alt={props.title} />
+                </div>
+                <div className="col-4 detail-card-container">
+                    <h3>{props.title}</h3>
+                    <h5>$ {props.price}</h5>
+                    <hr></hr>
+                    <p>{props.description}</p>
+                    <ItemCount />
+                </div>                
             </div>
-            <div className="card-body text-right h-100">
-                <h6>$ {props.price}</h6>
-            </div>
-            <ItemCount />
         </div>
     )
 } 
