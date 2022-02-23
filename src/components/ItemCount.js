@@ -1,20 +1,19 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 
-const ItemCount = (props) =>  {
-    const [valoraciones, setValoraciones] = useState(1); //Hook
-
-    let stock = 8;
+const ItemCount = ({stock}) =>  {
+    const [itemCantidad, setItemCantidad] = useState(1); //Hook
+    const [checkout, setCheckout] = useState(false);
 
     const increment = () => {
-        if (valoraciones < stock) {
-          setValoraciones(valoraciones+1);  
+        if (itemCantidad < stock) {
+          setItemCantidad(itemCantidad+1);  
         }
     }
 
     const decrement = () => {
-        if (valoraciones > 1) {
-           setValoraciones(valoraciones-1); 
+        if (itemCantidad > 1) {
+            setItemCantidad(itemCantidad-1); 
         }
     }
 
@@ -23,13 +22,13 @@ const ItemCount = (props) =>  {
         <div className="container">
             <div className="row">
                 <div className="col">
-                    <button onClick={decrement} className="counter-button">-1</button>{valoraciones}
+                    <button onClick={decrement} className="counter-button">-1</button>{itemCantidad}
                     <button onClick={increment} className="counter-button">+1</button>
                     <br />
-                    <button className="cart-add">Add to Cart</button>
+                    <button className="cart-add" onClick={() => setCheckout(!checkout)}>Add to Cart</button>
                 </div>
                 <div className="col">
-                    <Link to="/cart" href="/"><button>Checkout</button></Link>
+                    {checkout && <Link to="/cart" href="/"><button>Checkout</button></Link>}
                 </div>
                 
             </div>
