@@ -14,9 +14,12 @@ const ItemDetail = (props) => {
                     <h5>$ {props.price}</h5>
                     <hr></hr>
                     <p>{props.description}</p>
-                    <ItemCount />
+                    <div className="row">
+                            <ItemCount stock={props.stock} />
+                    </div>
                 </div>                
             </div>
+            <hr></hr>
         </div>
     )
 } 
