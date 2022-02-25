@@ -23,9 +23,13 @@ nav {
 }
 
 .counter-button {
-    margin: 4%;
+    margin: 0 3% 0 3%;
     padding: 2%;
-    font-size: 16px;
+}
+
+.checkout-button {
+    margin: 1.5% 0 0 3%;
+    padding: 2%;
 }
 
 

@@ -1,12 +1,10 @@
 import './App.css';
 import Home from './pages/Home.js';
-import Example from './components/prueba.js'
 
-function App() {
+const App = () => {
   return (
-    <div><Home />
-    <Example /></div>
-  );
+      <Home />
+  );  
 }
 
 export default App;

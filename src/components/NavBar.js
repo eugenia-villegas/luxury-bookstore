@@ -1,13 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo from '../img/Deluxe.png';
 import Carrito from '../components/CartWidget';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import SearchForm from "../components/SearchForm.js";
 
 const Navbar = () => {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light">
+            <nav className="navbar navbar-expand-lg navbar-light ">
             <div className="container-fluid">
                 <Link to="/"><img alt='logo' className="logo-img" src={Logo} /></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

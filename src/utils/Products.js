@@ -44,7 +44,7 @@ const itemsMag = [
         description: "An unequivocal sensory treat for the golf fanatic, Golf: The Impossible Collection has been described as an objet d’art perfect for both those who play, and those who simply wish to peruse its pages.",
         category: 1,
         price: 780,
-        stock: 10,
+        stock: 32,
         pictureUrl: golfImg,
     },
     {
