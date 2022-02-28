@@ -65,6 +65,17 @@ const ProductPrice = styled.div`
   font-weight: 200;
 `;
 
+const ButtonCounter = styled.button`
+    margin: 0 3% 0 3%;
+    padding: 2%;
+`;
+
+const CartAdd = styled.button`
+    border: none;
+    margin: 0 0 0 1.6%;
+`;
+
 export {
-    SearchContainer, Input, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice
+    SearchContainer, Input, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, 
+    ButtonCounter, CartAdd, WrapperCart
 }

@@ -22,11 +22,6 @@ nav {
   font-weight: lighter;
 }
 
-.counter-button {
-    margin: 0 3% 0 3%;
-    padding: 2%;
-}
-
 .checkout-button {
     margin: 1.5% 0 0 3%;
     padding: 2%;
@@ -34,8 +29,7 @@ nav {
 
 
 .cart-add {
-    border: none;
-    margin: 0 0 0 1.6%;
+    
 }
 
 .item-card {

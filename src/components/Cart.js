@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { CartContext } from './CartContext.js';
-import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice } from './styledComponents.js';
+import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, WrapperCart } from './styledComponents.js';
  
 const Cart = () => {
     const test = useContext(CartContext);
@@ -16,15 +16,15 @@ const Cart = () => {
                         <ImageCart src="https://res.cloudinary.com/hdsqazxtw/image/upload/v1559681445/logo_coderhouse_1_rec5vl.png" />
                         <Details>
                         <span>
-                            <b>Product:</b> JESSIE THUNDER SHOES
+                            <b>Product:</b> {test.title}
                         </span>
                         </Details>
                     </ProductDetail>
                     <PriceDetail>
-                        <ProductAmountContainer>
-                        <ProductAmount>2 items</ProductAmount>
-                        </ProductAmountContainer>
-                        <ProductPrice>$ 30 each</ProductPrice>
+                        <div>
+                        <div>2 items</div>
+                        </div>
+                        <ProductPrice>$ {test.price}</ProductPrice>
                     </PriceDetail>
                     </Product>
             </ContentCart>

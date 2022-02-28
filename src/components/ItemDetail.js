@@ -16,7 +16,7 @@ const ItemDetail = (props) => {
                     <p>{props.description}</p>
                     <p>Hay {props.stock} unidades en stock</p>
                     <div className="row">
-                            <ItemCount stock={props.stock}/>
+                            <ItemCount stock={props.stock} title= {props.title} pic={props.pictureUrl} price={props.price}/>
                     </div>
                 </div>                
             </div>
