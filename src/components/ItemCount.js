@@ -1,17 +1,8 @@
-import { useState, useContext } from 'react';
-import { Link } from "react-router-dom";
+import { useState } from 'react';
 import { ButtonCounter, CartAdd } from './styledComponents';
-import { CartContext } from './CartContext.js';
 
-const ItemCount = ({stock, pic, title, price}) =>  {
-    const [itemCantidad, setItemCantidad] = useState(1); //Hook
-    const [checkout, setCheckout] = useState(false);
-    
-    const test = useContext({CartContext});
-
-    const onAdd = (itemCantidad) => {
-        test.addToCart(itemCantidad, pic, title, price);
-    }
+const ItemCount = ({stock, initial, onAdd}) =>  {
+    const [itemCantidad, setItemCantidad] = useState(initial); //Hook
 
     const increment = () => {
         if (itemCantidad < stock) {
@@ -32,12 +23,9 @@ const ItemCount = ({stock, pic, title, price}) =>  {
                 <div className="col ">
                     <ButtonCounter onClick={decrement} className="btn btn-outline-dark">-1</ButtonCounter>{itemCantidad}
                     <ButtonCounter onClick={increment} className="btn btn-outline-dark">+1</ButtonCounter>
-                    <CartAdd onClick={() => {setCheckout(!checkout); onAdd(itemCantidad)}} className="btn btn-outline-dark">Add to Cart</CartAdd>
+                    <CartAdd onClick={() => onAdd(itemCantidad)} className="btn btn-outline-dark">Add to Cart</CartAdd>
                 </div>
-            </div>    
-            <div className="row">
-                {checkout && <Link to="/Cart" href="/"><button className="checkout-button btn btn-outline-dark">Checkout</button></Link>}
-            </div>    
+            </div>      
         </div>
         </>
     );

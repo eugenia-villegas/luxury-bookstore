@@ -1,7 +1,22 @@
 import ItemCount from './ItemCount.js';
+import { Link } from "react-router-dom";
+import { CartContext } from './CartContext.js';
+import { useState, useContext } from 'react';
 
 
 const ItemDetail = (props) => {
+    const [ cantidad, setCantidad ] = useState(1);
+    const [checkout, setCheckout] = useState(false);
+    const cartList = useContext(CartContext);
+
+    const onAdd = (quantity) => {
+        alert(`${quantity} units were added to your cart!`);
+        setCantidad(quantity);
+        setCheckout(true)
+        cartList.addToCart(props, quantity)
+    }
+
+
     return (
         <div className="container detail-container">
             <div className="row justify-content-md-center">
@@ -16,7 +31,10 @@ const ItemDetail = (props) => {
                     <p>{props.description}</p>
                     <p>Hay {props.stock} unidades en stock</p>
                     <div className="row">
-                            <ItemCount stock={props.stock} title= {props.title} pic={props.pictureUrl} price={props.price}/>
+                    {checkout ?
+                        <Link to="/Cart" href="/"><button className="checkout-button btn btn-outline-dark" cantidad={cantidad}>Checkout</button></Link>
+                    :
+                    <ItemCount stock={props.stock} initial={cantidad} onAdd={onAdd}></ItemCount>}
                     </div>
                 </div>                
             </div>

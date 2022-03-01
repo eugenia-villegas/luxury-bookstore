@@ -3,8 +3,8 @@ import { CartContext } from './CartContext.js';
 import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, WrapperCart } from './styledComponents.js';
  
 const Cart = () => {
-    const test = useContext(CartContext);
-    console.log("CartWidget", test);
+    const cartList = useContext(CartContext);
+    console.log(cartList);
 
     return (
         <div>
@@ -13,18 +13,18 @@ const Cart = () => {
             <ContentCart>
                     <Product>
                     <ProductDetail>
-                        <ImageCart src="https://res.cloudinary.com/hdsqazxtw/image/upload/v1559681445/logo_coderhouse_1_rec5vl.png" />
+                        <ImageCart src={cartList.img} />
                         <Details>
                         <span>
-                            <b>Product:</b> {test.title}
+                            <b>Product:</b> {cartList.title}
                         </span>
                         </Details>
                     </ProductDetail>
                     <PriceDetail>
                         <div>
-                        <div>2 items</div>
+                        <div>{cartList.quantity} items</div>
                         </div>
-                        <ProductPrice>$ {test.price}</ProductPrice>
+                        <ProductPrice>$ {cartList.price}</ProductPrice>
                     </PriceDetail>
                     </Product>
             </ContentCart>
