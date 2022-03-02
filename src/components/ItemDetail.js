@@ -13,7 +13,7 @@ const ItemDetail = (props) => {
         alert(`${quantity} units were added to your cart!`);
         setCantidad(quantity);
         setCheckout(true)
-        cartList.addToCart(props, quantity)
+        cartList.addToCart(quantity, props)
     }
 
 

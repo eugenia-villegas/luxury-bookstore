@@ -13,18 +13,18 @@ const Cart = () => {
             <ContentCart>
                     <Product>
                     <ProductDetail>
-                        <ImageCart src={cartList.img} />
+                        <ImageCart src={cartList.cartList[0].img} />
                         <Details>
                         <span>
-                            <b>Product:</b> {cartList.title}
+                            <b>Product:</b> {cartList.cartList[0].title}
                         </span>
                         </Details>
                     </ProductDetail>
                     <PriceDetail>
                         <div>
-                        <div>{cartList.quantity} items</div>
+                        <div>{cartList.cartList[0].quantity} items</div>
                         </div>
-                        <ProductPrice>$ {cartList.price}</ProductPrice>
+                        <ProductPrice>$ {cartList.cartList[0].price}</ProductPrice>
                     </PriceDetail>
                     </Product>
             </ContentCart>

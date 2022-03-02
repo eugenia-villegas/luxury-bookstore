@@ -10,7 +10,7 @@ const CartContextProvider = ({children}) => {
     const addToCart = (quantity, props) => {
         setCartList([{
             title: props.title,
-            img: quantity.pictureUrl,
+            img: props.pictureUrl,
             price: props.price,
             quantity: quantity,
         }])
