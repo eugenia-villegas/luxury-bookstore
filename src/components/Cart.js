@@ -10,24 +10,30 @@ const Cart = () => {
         <div>
             <WrapperCart>
             <TitleCart>YOUR CART</TitleCart>
-            <ContentCart>
+            {
+                cartList.cartList.map(item => (
+                    <ContentCart>
                     <Product>
                     <ProductDetail>
-                        <ImageCart src={cartList.cartList[0].img} />
+                        <ImageCart src={item.img} />
                         <Details>
                         <span>
-                            <b>Product:</b> {cartList.cartList[0].title}
+                            <b>Product:</b> {item.title}
                         </span>
-                        </Details>
+                        </Details>                        
+            
                     </ProductDetail>
                     <PriceDetail>
                         <div>
-                        <div>{cartList.cartList[0].quantity} items</div>
+                        <div>{item.quantity} items</div>
                         </div>
-                        <ProductPrice>$ {cartList.cartList[0].price}</ProductPrice>
+                        <ProductPrice>$ {item.price}</ProductPrice>
                     </PriceDetail>
                     </Product>
-            </ContentCart>
+                    </ContentCart>
+                )
+                )
+            }
             </WrapperCart>
         </div>  
     )
