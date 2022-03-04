@@ -33,14 +33,13 @@ const CartContextProvider = ({children}) => {
         return cartList.find((props) => props.id === idProduct) ? true : false;
     }
 
-    //const removeItem = (id) => {
-      //  setCartList(
-        //    cartList.filter(item => item.id !== id)
-        //);  
-    //}
+    //Vacia el carrito
+    const clear = () => {
+        setCartList([]);
+    }
     
     return (
-        <CartContext.Provider value = {{cartList, addToCart}}>
+        <CartContext.Provider value = {{cartList, addToCart, isInCart, clear}}>
             {children}
         </CartContext.Provider>
     );

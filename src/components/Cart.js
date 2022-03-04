@@ -35,6 +35,7 @@ const Cart = () => {
                 )
             }
             </WrapperCart>
+            <button onClick={cartList.clear}>Empty Cart</button>
         </div>  
     )
 }
