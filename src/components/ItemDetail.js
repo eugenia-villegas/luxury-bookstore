@@ -13,7 +13,8 @@ const ItemDetail = (props) => {
         alert(`${quantity} units were added to your cart!`);
         setCantidad(quantity);
         setCheckout(true)
-        cartList.addToCart(quantity, props)
+        cartList.addToCart(quantity, props);
+        console.log(props.id)
     }
 
 
@@ -26,6 +27,7 @@ const ItemDetail = (props) => {
                 </div>
                 <div className="col-6 detail-card-container">
                     <h3>{props.title}</h3>
+                    <caption>{props.id}</caption>
                     <h5>$ {props.price}</h5>
                     <hr></hr>
                     <p>{props.description}</p>

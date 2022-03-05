@@ -12,20 +12,21 @@ const Cart = () => {
             <TitleCart>YOUR CART</TitleCart>
             {
                 cartList.cartList.map(item => (
-                    <ContentCart>
+                    <ContentCart key={item.id}>
                     <Product>
                     <ProductDetail>
                         <ImageCart src={item.img} />
                         <Details>
                         <span>
-                            <b>Product:</b> {item.title}
+                            <b>{item.title}</b><br/>
+                            <button onClick={() => cartList.removeItem(item.id)}>Delete</button>
                         </span>
                         </Details>                        
             
                     </ProductDetail>
                     <PriceDetail>
                         <div>
-                        <div>{item.quantity} items</div>
+                        <div>{item.qty} items</div>
                         </div>
                         <ProductPrice>$ {item.price}</ProductPrice>
                     </PriceDetail>
