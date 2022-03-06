@@ -21,7 +21,7 @@ const WrapperCart = styled.div`
 `;
 
 const TitleCart = styled.h1`
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
 `;
 
@@ -29,6 +29,7 @@ const ContentCart = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1rem;
 `;
 
 const Product = styled.div`
@@ -75,7 +76,35 @@ const CartAdd = styled.button`
     margin: 0 0 0 1.6%;
 `;
 
+const Remove = styled.button`
+    width: 8rem;
+    padding: 1% 3% 1% 3%;
+    color: white;
+    font-weight: lighter;
+    background-color: black;
+    border-radius: 140px;
+    border: solid 1px black;
+`;
+
+const Clean = styled.button`
+    margin-left: 3.5rem;
+    padding: 0.5% 1.5% 0.5% 1.5%;
+    color: white;
+    font-weight: lighter;
+    background-color: black;
+    border-radius: 140px;
+    border: solid 1px black;
+`;
+
+const EmptyCart = styled.p`
+    text-align: center;
+`;
+
+const IdItem = styled.p`
+    display: none;
+`;
+
 export {
     SearchContainer, Input, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, 
-    ButtonCounter, CartAdd, WrapperCart
+    ButtonCounter, CartAdd, WrapperCart, Remove, Clean, EmptyCart, IdItem
 }

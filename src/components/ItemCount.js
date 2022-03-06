@@ -33,6 +33,3 @@ const ItemCount = ({stock, initial, onAdd}) =>  {
 
 export default ItemCount;
 
-
-/*A tener en cuenta*/
-/*className={this.state.hideElement ? "invisible" : "visible"*/

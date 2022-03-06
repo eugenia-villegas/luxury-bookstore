@@ -2,6 +2,7 @@ import ItemCount from './ItemCount.js';
 import { Link } from "react-router-dom";
 import { CartContext } from './CartContext.js';
 import { useState, useContext } from 'react';
+import { IdItem } from './styledComponents.js';
 
 
 const ItemDetail = (props) => {
@@ -9,12 +10,10 @@ const ItemDetail = (props) => {
     const [checkout, setCheckout] = useState(false);
     const cartList = useContext(CartContext);
 
-    const onAdd = (quantity) => {
-        alert(`${quantity} units were added to your cart!`);
+    const onAdd = (quantity) => {;
         setCantidad(quantity);
         setCheckout(true)
         cartList.addToCart(quantity, props);
-        console.log(props.id)
     }
 
 
@@ -27,7 +26,7 @@ const ItemDetail = (props) => {
                 </div>
                 <div className="col-6 detail-card-container">
                     <h3>{props.title}</h3>
-                    <caption>{props.id}</caption>
+                    <IdItem><caption>{props.id}</caption></IdItem>
                     <h5>$ {props.price}</h5>
                     <hr></hr>
                     <p>{props.description}</p>

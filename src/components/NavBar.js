@@ -31,7 +31,7 @@ const Navbar = () => {
                         <SearchForm/>  
                     </li> 
                     <li className="nav-item">
-                        <span className="carrito"><Carrito /></span>
+                        <span className="carrito"><Link to="/cart" className="nav-link active" href="/"><Carrito /></Link></span>
                     </li>             
                 </ul>
             </div>

@@ -1,6 +1,7 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext.js';
-import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, WrapperCart } from './styledComponents.js';
+import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, WrapperCart, Remove, Clean, EmptyCart } from './styledComponents.js';
  
 const Cart = () => {
     const cartList = useContext(CartContext);
@@ -18,8 +19,8 @@ const Cart = () => {
                         <ImageCart src={item.img} />
                         <Details>
                         <span>
-                            <b>{item.title}</b><br/>
-                            <button onClick={() => cartList.removeItem(item.id)}>Delete</button>
+                            <h5>{item.title}<br/></h5>
+                            <Remove onClick={() => cartList.removeItem(item.id)}>Remove Item</Remove>
                         </span>
                         </Details>                        
             
@@ -31,12 +32,19 @@ const Cart = () => {
                         <ProductPrice>$ {item.price}</ProductPrice>
                     </PriceDetail>
                     </Product>
+                    <hr/>
                     </ContentCart>
+                    
                 )
                 )
             }
+            {
+                (cartList.cartList.length > 0)
+                ? <Clean onClick={cartList.clear}>Empty Cart</Clean>
+                : <EmptyCart>Your cart is empty. Click <Link to="/">here</Link> to continue shopping.</EmptyCart>
+            }
             </WrapperCart>
-            <button onClick={cartList.clear}>Empty Cart</button>
+            
         </div>  
     )
 }
