@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
     const { idDetails } = useParams();
     
     function getItem(){
-        customFetch(2000, data.filter(item => item.id === idDetails))
+        customFetch(3000, data.filter(item => item.id === idDetails))
             .then(data=> setProducts(data))
             .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
     }

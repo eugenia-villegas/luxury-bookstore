@@ -46,9 +46,24 @@ const CartContextProvider = ({children}) => {
     const removeItem = (idProduct) => {
         setCartList(cartList.filter(item => (item.id !== idProduct)));
     }
+
+    //Sumar precios x mismo item. No funciona
+    
+
+    //Sumar precios totales
+    const totalItem = () => {
+        let totalPrice = cartList.map(item => item.price);
+        return totalPrice.reduce(((previousPrice, currentPrice) => previousPrice + currentPrice), 0)
+    }
+
+    //Calculo de items para el badge
+    const itemBadge = () => {
+        let badgeQty = cartList.map(item => item.qty);
+        return badgeQty.reduce(((previousValue, currentValue) => previousValue + currentValue), 0)
+    }
     
     return (
-        <CartContext.Provider value = {{cartList, addToCart, isInCart, clear, removeItem}}>
+        <CartContext.Provider value = {{cartList, addToCart, isInCart, clear, removeItem, itemBadge, totalItem}}>
             {children}
         </CartContext.Provider>
     );

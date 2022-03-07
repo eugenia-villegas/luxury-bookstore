@@ -54,9 +54,9 @@ const Details = styled.div`
 `;
 
 const PriceDetail = styled.div`
-  flex: 1;
+  flex: 3;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 `;
@@ -64,6 +64,15 @@ const PriceDetail = styled.div`
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 200;
+`;
+
+const TotalPrice = styled.div`
+  font-size: 30px;
+  font-weight: 200;
+`;
+
+const TotalDiv = styled.div`
+    font-size: 18px;
 `;
 
 const ButtonCounter = styled.button`
@@ -106,5 +115,5 @@ const IdItem = styled.p`
 
 export {
     SearchContainer, Input, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, 
-    ButtonCounter, CartAdd, WrapperCart, Remove, Clean, EmptyCart, IdItem
+    ButtonCounter, CartAdd, WrapperCart, Remove, Clean, EmptyCart, IdItem, TotalPrice, TotalDiv
 }

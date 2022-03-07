@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { IoCartOutline } from 'react-icons/io5';
 import Badge from '@mui/material/Badge';
+import { CartContext } from './CartContext';
 
 const Carrito = () => {
+    const cartList = useContext(CartContext);
 
     return (
         <div>
-                    <Badge badgeContent={0} color="primary">
+                    <Badge badgeContent={cartList.itemBadge()} color="primary">
                     <IoCartOutline color="action" />
                     </Badge>            
         </div>

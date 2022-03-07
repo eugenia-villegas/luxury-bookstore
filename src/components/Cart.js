@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext.js';
-import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, WrapperCart, Remove, Clean, EmptyCart } from './styledComponents.js';
+import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, WrapperCart, Remove, Clean, EmptyCart, TotalPrice, TotalDiv } from './styledComponents.js';
  
 const Cart = () => {
     const cartList = useContext(CartContext);
@@ -26,10 +26,12 @@ const Cart = () => {
             
                     </ProductDetail>
                     <PriceDetail>
-                        <div>
-                        <div>{item.qty} items</div>
-                        </div>
+                        <div>1 item
                         <ProductPrice>$ {item.price}</ProductPrice>
+                        </div>
+                        <div>{item.qty} items
+                        <ProductPrice>$ </ProductPrice>
+                        </div>
                     </PriceDetail>
                     </Product>
                     <hr/>
@@ -38,11 +40,19 @@ const Cart = () => {
                 )
                 )
             }
+            <TotalDiv>
+            {
+                (cartList.cartList.length > 0)
+                ? <TotalPrice>Total price $ {cartList.totalItem()}</TotalPrice>
+                : <p></p>
+                
+            }
             {
                 (cartList.cartList.length > 0)
                 ? <Clean onClick={cartList.clear}>Empty Cart</Clean>
                 : <EmptyCart>Your cart is empty. Click <Link to="/">here</Link> to continue shopping.</EmptyCart>
             }
+            </TotalDiv>
             </WrapperCart>
             
         </div>  
