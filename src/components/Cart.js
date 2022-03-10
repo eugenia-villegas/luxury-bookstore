@@ -30,7 +30,7 @@ const Cart = () => {
                         <ProductPrice>$ {item.price}</ProductPrice>
                         </div>
                         <div>{item.qty} items
-                        <ProductPrice>$ </ProductPrice>
+                        <ProductPrice>$ --</ProductPrice>
                         </div>
                     </PriceDetail>
                     </Product>
