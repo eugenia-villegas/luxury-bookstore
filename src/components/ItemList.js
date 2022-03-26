@@ -2,14 +2,12 @@ import Item from '../components/Item.js';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import db from '../utils/firebaseSet.js';
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore';
 
-
-const ItemList = ()=> {
+const ItemList = () => {
 
     const [products, setProducts] = useState ([]);
     const { idCategory } = useParams();
-        
 
     useEffect(() => {
         const firestoreFetch = async () => {
@@ -23,8 +21,13 @@ const ItemList = ()=> {
             .then(result => setProducts(result))
             .catch(error => console.log(error))
         
-    }, [products]);
+    }, [idCategory]);
 
+    useEffect(() => {
+        return (() => {
+            setProducts([]);
+        })
+    }, []);
 
     return(
         <>
