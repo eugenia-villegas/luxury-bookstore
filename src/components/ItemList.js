@@ -27,7 +27,7 @@ const ItemList = () => {
         return (() => {
             setProducts([]);
         })
-    }, []);
+    }, [idCategory]);
 
     return(
         <>

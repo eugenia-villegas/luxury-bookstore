@@ -8,10 +8,10 @@ const CartContextProvider = ({children}) => {
 
     
     const addToCart = (quantity, item) => {
-        
-         if (isInCart(item.id)) {
+        console.log(item.item);
+         if (isInCart(item.item.id)) {
              for (const products of cartList) {
-                 if (products.id === item.id) {
+                 if (products.id === item.item.id) {
                     products.qty += quantity;
                  }
              }
@@ -21,10 +21,10 @@ const CartContextProvider = ({children}) => {
                 ...cartList, //spread operator, para que al agregar el nuevo objeto
                             //igualmente mantenga los objetos que ya se encuentren en el carrito
                 {
-                title: item.title,
-                id: item.id,
-                img: item.pictureUrl,
-                price: item.price,
+                title: item.item.title,
+                id: item.item.id,
+                img: item.item.pictureUrl,
+                price: item.item.price,
                 qty: quantity,
             }])
         }
@@ -47,7 +47,7 @@ const CartContextProvider = ({children}) => {
         setCartList(cartList.filter(item => (item.id !== idProduct)));
     }
 
-    //Sumar precios x mismo item. No funciona
+    //Sumar precios x mismo item.item. No funciona
     
     
 
@@ -57,7 +57,7 @@ const CartContextProvider = ({children}) => {
         return totalPrice.reduce(((previousPrice, currentPrice) => previousPrice + currentPrice), 0)
     }
 
-    //Calculo de items para el badge
+    //Calculo de item.items para el badge
     const itemBadge = () => {
         let badgeQty = cartList.map(item => item.qty);
         return badgeQty.reduce(((previousValue, currentValue) => previousValue + currentValue), 0)

@@ -5,8 +5,7 @@ import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, Pri
  
 const Cart = () => {
     const cartList = useContext(CartContext);
-    console.log(cartList);
-
+    
     return (
         <div>
             <WrapperCart>
@@ -29,7 +28,7 @@ const Cart = () => {
                         <div>1 item
                         <ProductPrice>$ {item.price}</ProductPrice>
                         </div>
-                        <div>{item.qty} items
+                        <div>{item.qty} item
                         <ProductPrice>$ --</ProductPrice>
                         </div>
                     </PriceDetail>
@@ -40,6 +39,7 @@ const Cart = () => {
                 )
                 )
             }
+            
             <TotalDiv>
             {
                 (cartList.cartList.length > 0)
