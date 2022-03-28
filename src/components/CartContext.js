@@ -8,7 +8,6 @@ const CartContextProvider = ({children}) => {
 
     
     const addToCart = (quantity, item) => {
-        console.log(item.item);
          if (isInCart(item.item.id)) {
              for (const products of cartList) {
                  if (products.id === item.item.id) {
@@ -48,12 +47,19 @@ const CartContextProvider = ({children}) => {
     }
 
     //Sumar precios x mismo item.item. No funciona
-    
+    /*const fullPrice = () => {
+        let total = 0;
+        for (const products of cartList) {
+            total = total + (products.price * products.qty)
+            console.log(total)
+        }
+        return total;
+    }*/
     
 
     //Sumar precios totales
     const totalItem = () => {
-        let totalPrice = cartList.map(item => item.price);
+        let totalPrice = cartList.map(item => item.price * item.qty);
         return totalPrice.reduce(((previousPrice, currentPrice) => previousPrice + currentPrice), 0)
     }
 

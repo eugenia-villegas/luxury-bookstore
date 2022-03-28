@@ -43,7 +43,7 @@ const ProductDetail = styled.div`
 `;
 
 const ImageCart = styled.img`
-  width: 200px;
+  width: 12rem;
 `;
 
 const Details = styled.div`
@@ -62,13 +62,15 @@ const PriceDetail = styled.div`
 `;
 
 const ProductPrice = styled.div`
-  font-size: 30px;
-  font-weight: 200;
+  font-size: 22px;
+  font-weight: 190;
 `;
 
 const TotalPrice = styled.div`
-  font-size: 30px;
-  font-weight: 200;
+    padding-right: 3rem;
+    text-align: center;  
+    font-size: 1.7rem;
+    font-weight: 200;
 `;
 
 const TotalDiv = styled.div`
@@ -85,6 +87,11 @@ const CartAdd = styled.button`
     margin: 0 0 0 1.6%;
 `;
 
+const ItemTitle = styled.p`
+    font-size: large;
+    font-weight: bold;
+`;
+
 const Remove = styled.button`
     width: 8rem;
     padding: 1% 3% 1% 3%;
@@ -96,8 +103,9 @@ const Remove = styled.button`
 `;
 
 const Clean = styled.button`
+    font-size: 1rem;
     margin-left: 3.5rem;
-    padding: 0.5% 1.5% 0.5% 1.5%;
+    padding: 1% 3% 1% 3%;
     color: white;
     font-weight: lighter;
     background-color: black;
@@ -106,7 +114,19 @@ const Clean = styled.button`
 `;
 
 const EmptyCart = styled.p`
-    text-align: center;
+    position: absolute;
+    right: 35rem;
+`;
+
+const CreateOrder = styled.button`
+    font-size: 1rem;
+    margin-left: 3.5rem;
+    padding: 1% 3% 1% 3%;
+    color: white;
+    font-weight: lighter;
+    background-color: black;
+    border-radius: 140px;
+    border: solid 1px black;
 `;
 
 const IdItem = styled.p`
@@ -115,5 +135,5 @@ const IdItem = styled.p`
 
 export {
     SearchContainer, Input, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, 
-    ButtonCounter, CartAdd, WrapperCart, Remove, Clean, EmptyCart, IdItem, TotalPrice, TotalDiv
+    ButtonCounter, CartAdd, WrapperCart, Remove, Clean, EmptyCart, IdItem, TotalPrice, TotalDiv, ItemTitle, CreateOrder
 }

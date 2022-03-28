@@ -1,14 +1,13 @@
 import ItemDetail from './ItemDetail.js';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { firestoreFetchOne,firestoreFetch } from '../utils/firestoreFetch.js';
+import { firestoreFetchOne } from '../utils/firestoreFetch.js';
 
 /* promesa con datos */
 
 const ItemDetailContainer = () => {
     const [products, setProducts] = useState([]);
     const { idDetails } = useParams();
-    console.log(idDetails);
     
     useEffect(() => {
         firestoreFetchOne(idDetails)
@@ -19,7 +18,7 @@ const ItemDetailContainer = () => {
     return(
         <>
             {
-                 <ItemDetail item={products}                    />
+                 <ItemDetail item={products}/>
             }
         </>
     );

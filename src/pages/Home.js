@@ -5,6 +5,7 @@ import Cart from '../components/Cart.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SearchForm from '../components/SearchForm.js';
 import CartContextProvider from '../components/CartContext.js';
+import Checkout from '../components/Checkout.js';
 
 function Home() {
   return (
@@ -19,7 +20,8 @@ function Home() {
                     <Route path="/category/:idCategory" element={ <> <ItemListContainer /> </> } />
                     <Route path="/details/:idDetails" element={ <> <ItemDetailContainer /> </> } />
                     <Route path="/Cart" element={ <> <Cart /> </> } />
-                    <Route path="/" element={ <> <SearchForm/> </> }/>
+                    <Route path="/" element={ <> <SearchForm/> </> } />
+                    <Route path="/checkout" element={ <> <Checkout /> </> } />
                 </Routes>
             </BrowserRouter>
         </CartContextProvider>

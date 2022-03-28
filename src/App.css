@@ -18,7 +18,8 @@ nav {
 
 .carrito {
   position: relative;
-  left: 10px;
+  left: 4px;
+  bottom: 8px;
   font-size: 27px;
 }
 
