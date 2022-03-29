@@ -1,12 +1,12 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext.js';
-import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, WrapperCart, Remove, Clean, EmptyCart, TotalPrice, TotalDiv, ItemTitle, CreateOrder } from './styledComponents.js';
+import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, WrapperCart, Remove, Clean, EmptyCart, TotalPrice, TotalDiv, CreateOrder, ItemTitle } from './styledComponents.js';
  
 const Cart = () => {
     const cartList = useContext(CartContext);
     
-    const CreateOrder = () => {
+    const createOrder = () => {
         let order = {
             buyer: {
                 email: "dualipa@levitating.com",
@@ -70,7 +70,7 @@ const Cart = () => {
                         }
                         {
                             (cartList.cartList.length > 0)
-                            ? <div><Clean onClick={cartList.clear}>Clean Cart</Clean><Link to="/checkout" aria-current="page" href="/"><CreateOrder onClick={CreateOrder}>Send Order</CreateOrder></Link></div>
+                            ? <div><Clean onClick={cartList.clear}>Clean Cart</Clean><Link to="/checkout" aria-current="page" href="/"><CreateOrder onClick={createOrder}>Send Order</CreateOrder></Link></div>
                             : <EmptyCart>Your cart is empty. Click <Link to="/">here</Link> to continue shopping.</EmptyCart>
                         }
                             

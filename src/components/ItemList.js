@@ -16,12 +16,6 @@ const ItemList = () => {
         .catch(err => console.log(err))        
     }, [idCategory]);
 
-    useEffect(() => {
-        return (() => {
-            setProducts([]);
-        })
-    }, [idCategory]);
-
     return(
         <>
             {

@@ -15,13 +15,5 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-getCities(db);
-
-async function getCities(db) {
-  const citiesCol = collection(db, 'products');
-  const citySnapshot = await getDocs(citiesCol);
-  const cityList = citySnapshot.docs.map(doc => doc.data());
-  //console.log(cityList);
-}
 
 export default db;
