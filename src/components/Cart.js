@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
-import db from "../utils/firebaseConfig";
+import db from "../utils/firebaseSet";
 import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext.js';
 import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, WrapperCart, Remove, Clean, EmptyCart, TotalPrice, TotalDiv, CreateOrder, ItemTitle } from './styledComponents.js';
