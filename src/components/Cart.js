@@ -1,4 +1,6 @@
 import { useContext } from 'react';
+import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
+import db from "../utils/firebaseConfig";
 import { Link } from 'react-router-dom';
 import { CartContext } from './CartContext.js';
 import { TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, WrapperCart, Remove, Clean, EmptyCart, TotalPrice, TotalDiv, CreateOrder, ItemTitle } from './styledComponents.js';
@@ -14,9 +16,32 @@ const Cart = () => {
                 phone: "111111111"
             },
             items: cartList.cartList.map((it) => {return {id: it.id, price: it.price, title: it.title, qty: it.qty}}),
-            total: cartList.totalItem(),        
+            total: cartList.totalItem(), 
+            date: serverTimestamp(),       
         }
-        console.log(order);
+
+        const createOrderInFirestore = async () => {
+            // agrega el document con un Auto-Id
+            const newOrderInFirestore = doc(collection(db, 'orders'));
+            // usa el Auto-Id generado para agregar los datos al document
+            await setDoc(newOrderInFirestore, order);
+            return newOrderInFirestore;
+       };
+
+       createOrderInFirestore()
+       // el contenido del .THEN va entre {} porque se ejecuta más de 1 línea
+            .then((result) => {
+                 alert(`Your order code is: ${result.id}`);
+                 cartList.map(async (item) => {
+                      const itemRef = doc(db, 'products', item.id);
+                      await updateDoc(itemRef, {
+                           stock: increment(-item.qty)
+                      });
+                 });
+                 cartList.clear();
+            })
+            .catch((error) => console.log(error));
+
         return null
         
     }
