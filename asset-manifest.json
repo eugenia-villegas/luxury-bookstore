@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/luxury-bookstore/static/css/main.4dfe819e.css",
+    "main.js": "/luxury-bookstore/static/js/main.2f66cbb8.js",
+    "static/media/Deluxe.png": "/luxury-bookstore/static/media/Deluxe.7aff1c4b6f4fa9706a01.png",
+    "index.html": "/luxury-bookstore/index.html",
+    "main.4dfe819e.css.map": "/luxury-bookstore/static/css/main.4dfe819e.css.map",
+    "main.2f66cbb8.js.map": "/luxury-bookstore/static/js/main.2f66cbb8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4dfe819e.css",
+    "static/js/main.2f66cbb8.js"
+  ]
+}
