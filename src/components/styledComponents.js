@@ -87,6 +87,8 @@ const CartAdd = styled.button`
     margin: 0 0 0 1.6%;
 `;
 
+
+//Cart
 const ItemTitle = styled.p`
     font-size: large;
     font-weight: bold;
@@ -133,7 +135,23 @@ const IdItem = styled.p`
     display: none;
 `;
 
+//Form
+const Form = styled.div`
+    width: 50%;
+    margin: auto;
+    border: solid 1px gray; 
+    border-radius: 2rem;
+    padding: 2rem;
+`;
+
+const FormTitle = styled.h1`
+    font-size: xx-large;
+    text-align: center;
+    font-weight: 300;
+`;
+
 export {
     SearchContainer, Input, TitleCart, ContentCart, Product, ProductDetail, ImageCart, Details, PriceDetail, ProductPrice, 
-    ButtonCounter, CartAdd, WrapperCart, Remove, Clean, EmptyCart, IdItem, TotalPrice, TotalDiv, ItemTitle, CreateOrder
+    ButtonCounter, CartAdd, WrapperCart, Remove, Clean, EmptyCart, IdItem, TotalPrice, TotalDiv, ItemTitle, CreateOrder,
+    Form, FormTitle
 }
