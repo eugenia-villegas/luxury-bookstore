@@ -3,4 +3,4 @@ Luxury Store
 This is my first React project. Though is still in process but you can check it out <a href="https://eugenia-villegas.github.io/luxury-bookstore">here.</a>
 
  
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://drive.google.com/file/d/17Roh_0GX2lzjOVdjvpbH68k3sDFO78us/view?usp=sharing)
+[![Watch the video](https://drive.google.com/file/d/17Roh_0GX2lzjOVdjvpbH68k3sDFO78us/view?usp=sharing)]([https://youtu.be/vt5fpE0bzSY](https://drive.google.com/file/d/17Roh_0GX2lzjOVdjvpbH68k3sDFO78us/view?usp=sharing))
